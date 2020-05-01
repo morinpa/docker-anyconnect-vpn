@@ -1,11 +1,9 @@
 # How to use
-`docker-compose up -d` with
 
-```
-  V`export PN_NAME=""
-  export ANYCONNECT_SERVER=""
-  export ANYCONNECT_USER=""
-  export ANYCONNECT_OPTIONS="--servercert ..."
-  export ANYCONNECT_PING=""
-  #export ANYCONNECT_PASSWORD=""
-``
+docker run --privileged \
+	-e ANYCONNECT_USER=... \
+	-e ANYCONNECT_PASSWORD=... \
+	-e ANYCONNECT_SERVER=... \
+	-e ANYCCONNECT_PING=... \
+	-e ANYCONNECT_OPTIONS="--servercert ..." \
+	 morinpa/docker-anyconnect-vpn 
